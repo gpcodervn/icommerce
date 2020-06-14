@@ -1,36 +1,48 @@
 ### iCommerce System
 
 ## Tools used
-    - Spring boot 2.3.1.RELEASE
-    - Junit 5
-    - Mysql 8.0
     - JDK 11
     - Intellij
-    - Lombok
     - Maven
+    - Spring boot 2.3.1.RELEASE
+    - Spring Cloud Hoxton.SR5
+    - Mysql
+    - Junit 5
+    - Lombok
    
 ## Folder Structure
-    controller: Product restful API 
-    dao: Product repository which extends JpaRepository to obtain DB operation.
-    service: service layer
-    exception: custom exception handling of restful API
-    entity: Product and ProductAudit entities    
-    test: Unit test for searching feature
-    
-## How to set up
-    Mysql Database
-    * Database URL: 192.168.64.2
-    * Create database on mysql with name "icommerce"
-    * Username: root
-    * Password: 1234567
-    * Port: 3306
 
-    If your configuration doesn't match, Please update these configurations at: application-dev.properties
-    
-    That's it for setting up
+Each service has the same structure:
+
+    controller: The Restful API 
+    repository: The Repository which extends JpaRepository to obtain DB operation.
+    service: The Business layer
+    exception: Custom exception handling of restful API
+    entity: The Entity
+    configuration: All configuration for service
+    model: Define a transfer object for receive request from client and response data to client
+    test: Unit test
 
 ## Building JAR File
-    
+
+### Build & package services
+
 Run mvn command:
+
 > mvn clean install
-    
+
+### Start account service 
+
+Please follow [this guideline](ic-account/README.md)
+
+### Start audit service 
+
+Please follow [this guideline](ic-audit/README.md)
+
+### Start product service 
+
+Please follow [this guideline](ic-product/README.md)
+
+### Start order service 
+
+Please follow [this guideline](ic-order/README.md)

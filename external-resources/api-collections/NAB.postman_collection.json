@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "746951ec-7f7b-4355-b66e-23a30b445402",
+		"name": "NAB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\": \"ptgiang56it@gmail.com\",\n\t\"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/v1/auth/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer Audit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"feature\": \"product\",\n\t\"action\": \"search\",\n\t\"content\": \"{\\\"keyword\\\":\\\"mac\\\"}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8060/api/v1/customer-audits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"api",
+						"v1",
+						"customer-audits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Macbook Pro 2019\",\n\t\"description\": \"The best produt in 2020\",\n\t\"price\": 2499,\n\t\"branchName\": \"Apple\",\n\t\"color\": \"pink\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"MacBook\"\n\t\"description\": \"The best produt in 2020\",\n\t\"price\": 2499,\n\t\"branchName\": \"Apple\",\n\t\"color\": \"grey\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/products?keyword=apple&limit=5&page=0&sort=-name&sort=-price&minPrice=1000&maxPrice=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "apple"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "sort",
+							"value": "-name"
+						},
+						{
+							"key": "sort",
+							"value": "-price"
+						},
+						{
+							"key": "minPrice",
+							"value": "1000"
+						},
+						{
+							"key": null,
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "maxPrice",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iphone 8 Plus\",\n\t\"description\": \"The best produt in 2018\",\n\t\"price\": 799,\n\t\"branchName\": \"Apple\",\n\t\"color\": \"yello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/products/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detelete product by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iphone 8 Plus\",\n\t\"description\": \"The best produt in 2018\",\n\t\"price\": 799,\n\t\"branchName\": \"Apple\",\n\t\"color\": \"yello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/products/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJ1c2VybmFtZVwiOlwicHRnaWFuZzU2aXRAZ21haWwuY29tXCIsXCJyb2xlQ29kZXNcIjpbXCJBRE1JTlwiXX0iLCJzY29wZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwczovL2ljb21tZXJjZS5jb20vIiwiaWF0IjoxNTkyMDU3Mjk4LCJleHAiOjI0NTYwNTcyOTh9.OYdI91G_avsSC8ktwwKMqXEzxbRuA6Bi85o8SkYbiuBBtOCnofxLxsV3e1LGgeIr-vNRF0x0NTLWNmgNvansVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"orderDetails\": [\n\t\t{\n\t\t\t\"productId\": 2,\n\t\t\t\"name\": \"iphone X\",\n            \"price\": 1499.0,\n            \"branchName\": \"Apple\",\n            \"color\": \"pink\",\n            \"amount\": 2\n\t\t},\n\t\t\n\t\t{\n\t\t\t\"productId\": 4,\n            \"name\": \"iphone 8 Plus\",\n            \"description\": \"The best produt in 2020\",\n            \"price\": 1499.0,\n            \"branchName\": \"Apple\",\n            \"color\": \"pink\",\n            \"amount\": 10\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
