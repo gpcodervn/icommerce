@@ -1,0 +1,55 @@
+logging:
+  level:
+    root: WARN
+
+    # Set INFO to see the allocated port
+    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
+    org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
+
+---
+spring:
+  profiles: default
+server:
+  port: 9000
+info:
+  component: Discovery Server
+eureka:
+  instance:
+    hostname: icommerce.com
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+---
+spring:
+  profiles: icommerce-au
+  application:
+    name: eureka-server-clustered
+server:
+  port: 9001
+eureka:
+  instance:
+    hostname: icommerce.au
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/,http://icommerce.vn:9002/eureka/
+
+---
+spring:
+  profiles: icommerce-vn
+  application:
+    name: eureka-server-clustered
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: icommerce.vn
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/,http://icommerce.au:9001/eureka/
