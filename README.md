@@ -94,3 +94,5 @@ Please follow [this guideline](/ic-backend/README.md)
 ## How to verify all services was running
 
 Please go to the discovery server at this link: http://localhost:9000/
+
+![](/external-resources/screenshot/service-registry.png)
