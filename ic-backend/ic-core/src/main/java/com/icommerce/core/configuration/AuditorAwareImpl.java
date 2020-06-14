@@ -1,4 +1,4 @@
-package com.icommerce.product.configuration;
+package com.icommerce.core.configuration;
 
 import com.icommerce.core.dto.UserCredential;
 import org.springframework.data.domain.AuditorAware;

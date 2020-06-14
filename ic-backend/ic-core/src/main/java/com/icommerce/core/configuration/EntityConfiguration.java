@@ -1,4 +1,4 @@
-package com.icommerce.order.configuration;
+package com.icommerce.core.configuration;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
-@EntityScan(basePackageClasses = { Jsr310JpaConverters.class }, basePackages = "com.icommerce.order.entity")
+@EntityScan(basePackageClasses = { Jsr310JpaConverters.class }, basePackages = "com.icommerce.*.entity")
 @EnableJpaAuditing
 public class EntityConfiguration {
 
