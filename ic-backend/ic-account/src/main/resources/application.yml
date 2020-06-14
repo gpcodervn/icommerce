@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: ic-account
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# -- Configure for Ribbon:
+
+### Audit server
+ping-server:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8060,localhost:8061,localhost:8062
+    ServerListRefreshInterval: 15000
+
+# -- Configure Discovery Client (Eureka Client).
+---
+eureka:
+  instance:
+    appname: ic-account
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8070
+
+---
+spring:
+  profiles: ic-account-replica01
+eureka:
+  instance:
+    appname: ic-account
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8071
+
+---
+spring:
+  profiles: ic-account-replica02
+eureka:
+  instance:
+    appname: ic-account
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8072

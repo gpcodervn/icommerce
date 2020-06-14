@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: ic-order
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# -- Configure Discovery Client (Eureka Client).
+---
+eureka:
+  instance:
+    appname: ic-order
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8080
+
+---
+spring:
+  profiles: ic-order-replica01
+eureka:
+  instance:
+    appname: ic-order
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8081
+
+---
+spring:
+  profiles: ic-order-replica02
+eureka:
+  instance:
+    appname: ic-order
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8082

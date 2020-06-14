@@ -3,10 +3,12 @@ package com.icommerce.audit;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import java.time.LocalDateTime;
 
 @Log4j2
+@EnableEurekaClient
 @SpringBootApplication(scanBasePackages = {"com.icommerce.audit", "com.icommerce.core"})
 public class IcAuditApplication {
 

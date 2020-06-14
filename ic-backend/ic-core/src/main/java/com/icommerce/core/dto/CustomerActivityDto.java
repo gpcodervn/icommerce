@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -23,7 +21,4 @@ public class CustomerActivityDto {
 
     @NotBlank
     private String content;
-
-    @NotNull
-    private LocalDateTime triggeredAt;
 }

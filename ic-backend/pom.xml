@@ -112,7 +112,7 @@
 			<version>4.0</version>
 		</dependency>
 
-		<!-- Cloud config client -->
+		<!-- Spring Cloud config client -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -120,6 +120,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- Spring cloud service client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 	</dependencies>

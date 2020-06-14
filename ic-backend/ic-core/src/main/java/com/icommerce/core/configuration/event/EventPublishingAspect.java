@@ -17,7 +17,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.lang.reflect.Method;
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @ConditionalOnProperty(
@@ -46,7 +45,6 @@ public class EventPublishingAspect {
             CustomerActivityDto dto = CustomerActivityDto.builder()
                     .action(annotation.action())
                     .feature(annotation.feature())
-                    .triggeredAt(LocalDateTime.now())
                     .content(JsonUtils.toJson(joinPoint.getArgs()))
                     .build();
             log.debug("Publish a create event for " + dto);

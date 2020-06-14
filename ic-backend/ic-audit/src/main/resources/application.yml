@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: ic-audit
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# -- Configure Discovery Client (Eureka Client).
+---
+eureka:
+  instance:
+    appname: ic-audit
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8060
+
+---
+spring:
+  profiles: ic-audit-replica01
+eureka:
+  instance:
+    appname: ic-audit
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8061
+
+---
+spring:
+  profiles: ic-audit-replica02
+eureka:
+  instance:
+    appname: ic-audit
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://icommerce.com:9000/eureka/
+server:
+  port: 8062

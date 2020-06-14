@@ -31,6 +31,12 @@
 			<version>8.0.20</version>
 		</dependency>
 
+		<!-- Load balancer -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+
 	</dependencies>
 
 </project>
