@@ -44,6 +44,31 @@ We can enable/ disable this feature easily without any affect to the business lo
     - Junit 5
     - Lombok
 
+### Libraries
+
+    - spring-cloud-config-server : Config server which provides an HTTP resource-based API for external configuration, in this project we stored the database configuration on Github.
+    - spring-cloud-starter-config : provides server-side and client-side support for externalized configuration in a distributed system.
+    - spring-cloud-starter-netflix-eureka-server : Eureka Server (Service Registry). This library allows services to find and communicate with each other without hard-coding hostname and port.
+    - spring-cloud-starter-netflix-eureka-client : Eureka Client, for registering the service with Service Registry.
+    - spring-cloud-starter-netflix-ribbon : Load balancer client.
+    - spring-boot-starter-actuator : monitor and manage the application.
+    - spring-boot-starter-web : for building web, including RESTful, applications.
+    - spring-boot-starter-test : for testing the web RESTful API.
+    - spring-boot-starter-aop : for aspect-oriented programming with Spring AOP and AspectJ. We use this feature for implementing the customer audit feature.
+    - spring-boot-starter-data-jpa: for using Spring Data JPA with Hibernate.
+    - mysql-connector-java:  JDBC driver for MySQL.
+    - spring-boot-starter-validation: for using Java Bean Validation with Hibernate Validator.
+    - spring-boot-starter-security: for using Spring Security
+    - spring-security-test: for the testing Spring Security
+    - jjwt: JSON Web Token Support For Java.
+    - auth0: Java implementation of JSON Web Token (JWT).
+    - spring-boot-devtools: Developer Tools for supporting Automatic Restart, LiveReload.
+    - log4jdbc-spring-boot-starter: for using Log4jdbc with Spring Boot, it can log SQL that is ready to run with actual values.
+    - modelmapper: to make object mapping easy, by automatically determining how one object model maps to another, based on conventions.
+    - commons-lang3: The utilities for supporting the operations on String, Number, Reflection, Random, ...
+    - commons-collections4: Commons Collections for supporting the operations on Collections data structures in Java.
+    
+
 ## Folder structure
 ```
 root
