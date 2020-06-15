@@ -11,12 +11,15 @@ Run the following command:
 Start multiple applications by profiles:
 
 > java -jar -Dspring.profiles.active=dev,ic-product-replica01 /target/ic-product-0.0.1-SNAPSHOT.jar
+
 > java -jar -Dspring.profiles.active=dev,ic-product-replica02 /target/ic-product-0.0.1-SNAPSHOT.jar
 
 ## Don't like to start with built jar file, just use this command:
 
 > mvn spring-boot:run -Dspring-boot.run.profiles=dev
+
 > mvn spring-boot:run -Dspring-boot.run.profiles=dev,ic-product-replica01
+
 > mvn spring-boot:run -Dspring-boot.run.profiles=dev,ic-product-replica02
 
 ### Check API POST
