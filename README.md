@@ -34,6 +34,16 @@ However, failure to store customer activity is completely transparent to custome
 Besides that I also AOP for listening on search/ view event on service and audit the customer's activity. 
 We can enable/ disable this feature easily without any affect to the business logic.
 
+## Tools used
+    - JDK 11
+    - Intellij
+    - Maven
+    - Spring boot 2.3.1.RELEASE
+    - Spring Cloud Hoxton.SR5
+    - Mysql
+    - Junit 5
+    - Lombok
+
 ## Folder structure
 ```
 root
