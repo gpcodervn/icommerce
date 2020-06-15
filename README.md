@@ -97,7 +97,7 @@ Please follow [this guideline](/ic-config-server/README.md)
 
 Please follow [this guideline](/ic-discovery-server/README.md)
 
-### Start backend
+### Start API of icommerce services
 
 Please follow [this guideline](/ic-backend/README.md)
 
