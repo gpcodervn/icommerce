@@ -31,7 +31,7 @@ Run mvn command:
 
 > mvn clean install
 
-### Start account service 
+### Start auth service 
 
 Please follow [this guideline](ic-account/README.md)
 
